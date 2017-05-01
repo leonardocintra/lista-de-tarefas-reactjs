@@ -1,0 +1,24 @@
+{
+  "name": "lista-de-tarefas-reactjs",
+  "version": "1.0.0",
+  "description": "Simples aplicação com RactJS - Lista de Tarefas (list-to-do)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonardocintra/lista-de-tarefas-reactjs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leonardocintra/lista-de-tarefas-reactjs/issues"
+  },
+  "homepage": "https://github.com/leonardocintra/lista-de-tarefas-reactjs#readme",
+  "devDependencies": {
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
