@@ -4,7 +4,7 @@ export default class Todo extends Component {
     render() {
         return (
             <div>
-                <h1>Todo</h1>
+                <h1>Ronaldo</h1>
             </div>
         )
     }
