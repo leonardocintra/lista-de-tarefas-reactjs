@@ -21,11 +21,11 @@ export default props => {
     }
 
     return (
-        <table className="table table-hove">
+        <table className="table">
             <thead>
                 <tr>
                     <th>Descrição</th>
-                    <th>Ações</th>
+                    <th className="tableActions">Ações</th>
                 </tr>
             </thead>
             <tbody>{renderRows()}</tbody>
