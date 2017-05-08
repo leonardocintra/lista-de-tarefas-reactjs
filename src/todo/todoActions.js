@@ -8,8 +8,9 @@ export const changeDescription = event => ({
     payload: event.target.value
 })
 
-export const search = () => {
-    const request = axios.get(`${URL}?sort=-createAt`)
+export const search = (description) => {
+    const search = description ? `&description__regex=/${description}/` : ''
+    const request = axios.get(`${URL}?sort=-createAt${search}`)
     return {
         type: 'TODO_SEARCHED',
         payload: request
@@ -23,9 +24,14 @@ export const clear = () => {
 
 export const add = (description) => {
     return dispatch => {
-        axios.post(URL, {description: description })
-            .then(resp => dispatch(clear()))
-            .then(resp => dispatch(search()))
+        if (description.trim() != "") {
+            axios.post(URL, {description: description })
+                .then(resp => dispatch(clear()))
+                .then(resp => dispatch(search()))
+        }
+        else {
+            console.log("Não vou adicionar nada vazio")
+        }
     }
 }
 
